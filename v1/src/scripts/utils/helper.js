@@ -6,4 +6,4 @@ const passwordToHash=(password)=>{
 
 module.exports={
     passwordToHash,
-}
+};

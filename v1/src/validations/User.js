@@ -6,6 +6,12 @@ const createValidation=joi.object({
     email:joi.string().email().required().min(8),
 });
 
+const loginValidation=joi.object({
+    password:joi.string().required().min(8),
+    email:joi.string().email().required().min(8),
+});
+
 module.exports={
     createValidation,
+    loginValidation,
 };
