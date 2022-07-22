@@ -1,6 +1,6 @@
 const httpstatus = require('http-status');
 const { insert, list ,loginUser} = require('../services/User');
-const {passwordToHash}=require('../scripts/utils/helper')
+const {passwordToHash,generateAccessToken, generateRefreshToken}=require('../scripts/utils/helper')
 
 const index = (req, res) => {
     list().then((response) => {
@@ -25,6 +25,14 @@ const login=(req,res)=>{
     loginUser(req.body)
     .then((user)=>{
         if(!user) return res.status(httpstatus.NOT_FOUND).send({message:"kullanici bulunamadi"});
+        user={
+            ...user.toObject(),
+            tokens:{
+                access_token:generateAccessToken(user),
+                refresh_token:generateRefreshToken(user),
+            }
+        }
+        delete user.password;
         res.status(httpstatus.OK).send(user);
     })
     .catch((e)=>{

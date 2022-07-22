@@ -1,2 +1,4 @@
 {"level":"info","message":{"_id":"62d853416a74ed4c38efb2fb","createdAt":"2022-07-20T19:10:57.464Z","name":"log deneme","updatedAt":"2022-07-20T19:10:57.464Z"},"service":"user-service"}
 {"level":"info","message":{"_id":"62d8537728da87f5ad2cc511","createdAt":"2022-07-20T19:11:51.007Z","name":"log deneme","updatedAt":"2022-07-20T19:11:51.007Z"},"service":"project-service"}
+{"level":"info","message":{"_id":"62db006aef7c6ddfbd097390","createdAt":"2022-07-22T19:54:18.076Z","name":"log deneme","updatedAt":"2022-07-22T19:54:18.076Z"},"service":"project-service"}
+{"level":"info","message":{"_id":"62db012def7c6ddfbd097396","createdAt":"2022-07-22T19:57:33.403Z","name":"Test Project","updatedAt":"2022-07-22T19:57:33.403Z"},"service":"project-service"}
