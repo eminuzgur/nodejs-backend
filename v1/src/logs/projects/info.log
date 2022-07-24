@@ -6,3 +6,4 @@
 {"level":"info","message":{"_id":"62db1f2c5fd241a87af2cb75","createdAt":"2022-07-22T22:05:32.937Z","name":"Deneme","updatedAt":"2022-07-22T22:05:32.937Z"},"service":"project-service"}
 {"level":"info","message":{"_id":"62dd9eeee06163a9d0dfb7c4","createdAt":"2022-07-24T19:35:10.668Z","name":"Test1","updatedAt":"2022-07-24T19:35:10.668Z","user_id":"62db014fef7c6ddfbd097399"},"service":"project-service"}
 {"level":"info","message":{"_id":"62dd9f72e06163a9d0dfb7c8","createdAt":"2022-07-24T19:37:22.508Z","name":"Test1","updatedAt":"2022-07-24T19:37:22.508Z","user_id":"62dd9df91f168a0865f94161"},"service":"project-service"}
+{"level":"info","message":{"_id":"62ddafda0ab75df525ec1002","createdAt":"2022-07-24T20:47:22.046Z","name":"Test2","updatedAt":"2022-07-24T20:47:22.046Z","user_id":"62dd9df91f168a0865f94161"},"service":"project-service"}

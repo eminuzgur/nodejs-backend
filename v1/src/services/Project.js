@@ -5,12 +5,14 @@ const insert = (data) => {
     return project.save();
 };
 
-const list = () => {
-    return Project.find({}).populate({
+const list = (where) => {
+    console.log('where :>> ', where);   
+    return Project.find(where||{}).populate({
         path:'user_id',
         select:'full_name email',
     });
 }
+
 const modify=(id,data)=>{
     return Project.findByIdAndUpdate(id,data,{new:true});
 }
