@@ -9,7 +9,7 @@ const UserSchema=new Mongoose.Schema({
     },
     profile_image:String,
 },{
-    versionKey:false,timeseries:true
+    timestamps:true,versionKey:false
 });
 
 module.exports= Mongoose.model("user",UserSchema);

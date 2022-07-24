@@ -3,6 +3,10 @@ const logger=require('../scripts/logger/Project')
 
 const ProjectSchema = new Mongoose.Schema({
     name: String,
+    user_id:{
+        type:Mongoose.Types.ObjectId,
+        ref:'user',
+    },
 },
     { versionKey: false, timestamps: true }
 );
