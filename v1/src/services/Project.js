@@ -6,7 +6,6 @@ const insert = (data) => {
 };
 
 const list = (where) => {
-    console.log('where :>> ', where);   
     return Project.find(where||{}).populate({
         path:'user_id',
         select:'full_name email',

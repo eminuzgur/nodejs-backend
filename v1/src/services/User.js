@@ -13,6 +13,7 @@ const loginUser=(logginData)=>{
     return User.findOne(logginData)
 };
 
+
 module.exports = {
     insert,
     list,

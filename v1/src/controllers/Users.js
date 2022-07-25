@@ -51,9 +51,14 @@ const projectList=(req,res)=>{
     })
 }
 
+const resetPassword=(req,res)=>{
+    
+}
+
 module.exports = {
     index,
     create,
     login,
     projectList,
+    resetPassword,
 };
