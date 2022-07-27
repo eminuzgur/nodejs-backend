@@ -10,7 +10,7 @@ router.get('/',index);
 router.route('/').post(validate(schemas.createValidation),create);
 router.route('/login').post(validate(schemas.loginValidation),login);
 router.route('/projects').get(authenticate,projectList)
-router.route('/reset-password').post(resetPassword)
+router.route('/reset-password').post(validate(schemas.resetPasswordValidation),resetPassword)
 
 
 module.exports = router;

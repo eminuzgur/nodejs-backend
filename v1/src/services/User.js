@@ -13,9 +13,13 @@ const loginUser=(logginData)=>{
     return User.findOne(logginData)
 };
 
+const modify=(where,data)=>{
+    return User.findOneAndUpdate(where,data,{new:true});
+}
 
 module.exports = {
     insert,
     list,
     loginUser,
+    modify,
 };

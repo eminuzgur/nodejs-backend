@@ -3,12 +3,13 @@ const helmet = require('helmet');
 
 const config = require('./config');
 const loaders = require('./loaders');
-
+const events=require('./scripts/events')
 const { ProjectRoutes,UsersRoutes } = require('./routes');
 
 
 config();
 loaders();
+events();
 
 const app = express();
 
