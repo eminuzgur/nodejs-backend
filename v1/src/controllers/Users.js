@@ -68,11 +68,19 @@ const resetPassword = (req, res) => {
         res.status(httpstatus.INTERNAL_SERVER_ERROR).send({ error: 'dasda' })
     })
 }
-
+const update=(req,res)=>{
+    
+    userService.modify({_id:req.user?._id},req.body).then(updatedUser=>{
+        res.status(httpstatus.OK).send(updatedUser);
+    }).catch((e)=>{
+        res.status(httpstatus.INTERNAL_SERVER_ERROR).send({error:'hata'})
+    })
+}
 module.exports = {
     index,
     create,
     login,
     projectList,
     resetPassword,
+    update,
 };
