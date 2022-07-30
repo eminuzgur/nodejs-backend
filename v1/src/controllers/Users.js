@@ -51,7 +51,7 @@ const projectList = (req, res) => {
     }).catch(() => {
         res.status(httpstatus.INTERNAL_SERVER_ERROR).send({ error: "hata" })
     })
-}
+};
 
 const resetPassword = (req, res) => {
     const new_password = uuid.v4()?.split("-")[0] || new Date().getTime();
@@ -67,7 +67,8 @@ const resetPassword = (req, res) => {
     }).catch(e => {
         res.status(httpstatus.INTERNAL_SERVER_ERROR).send({ error: 'dasda' })
     })
-}
+};
+
 const update=(req,res)=>{
     
     userService.modify({_id:req.user?._id},req.body).then(updatedUser=>{
@@ -75,7 +76,9 @@ const update=(req,res)=>{
     }).catch((e)=>{
         res.status(httpstatus.INTERNAL_SERVER_ERROR).send({error:'hata'})
     })
-}
+};
+
+
 module.exports = {
     index,
     create,

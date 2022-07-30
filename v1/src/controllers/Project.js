@@ -28,9 +28,18 @@ const update=(req,res)=>{
         res.status(httpstatus.INTERNAL_SERVER_ERROR).send({error:"gunccelleme sirasinda bir hata olustu"})
     })
 }
+const remove=(req,res)=>{
+    if(!req.params?.id) return res.status(httpstatus.BAD_REQUEST).send({message:"id biligisi eksik"})
+    projectService.remove(req.params.id).then((deletedProject)=>{
+        res.status(httpstatus.OK).send(deletedProject);
+    }).catch((e)=>{
+        res.status(httpstatus.INTERNAL_SERVER_ERROR).send({error:"Silme sirasinda bir hata olustu"})
+    })
+}
 
 module.exports = {
     index,
     create,
     update,
+    remove,
 };
